@@ -1,12 +1,13 @@
 {
   "name": "vue-component-prismjs",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "build": "tsc && copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.vue dist/",
+    "publish": "yarn publish",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -25,9 +26,11 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
+    "copyfiles": "^2.4.1",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0",
     "install": "^0.13.0",
+    "rimraf": "^3.0.2",
     "typescript": "^4.3.5"
   }
 }
