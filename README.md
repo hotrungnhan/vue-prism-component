@@ -1,10 +1,9 @@
-#This nearly a fork from [egoist-vue-prism-component](https://github.com/egoist/vue-prism-component/edit/master/README.md) with some edit from me.
+#This nearly a fork from [egoist-vue-prism-component](https://github.com/egoist/vue-prism-component/edit/master/README.md) , rewrite with typescript support, fix bug. blabla
 ## Install
 
 ```bash
 yarn add vue-component-prismjs
 ```
-
 
 First you need to load `Prism` somewhere in your app:
 
@@ -68,10 +67,6 @@ import 'prismjs/components/prism-rust'
 <Prism language="rust" code={ myRustCode } />
 ```
 
-## Related
-
-- [vue-highlight-component](https://github.com/egoist/vue-highlight-component): highlight code using highlight.js and vue component.
-
 
 ## Contributing
 
@@ -80,9 +75,3 @@ import 'prismjs/components/prism-rust'
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
-
-
-## Author
-
-**vue-prism-component** © [egoist](https://github.com/egoist), Released under the [MIT](./LICENSE) License.<br>
-Authored and maintained by egoist with help from contributors ([list](https://github.com/egoist/vue-prism-component/contributors)).
