@@ -1,5 +1,5 @@
 <script>
-import { h, defineComponent, onBeforeUpdate } from "vue";
+import { h, defineComponent } from "vue";
 import Prism from "prismjs";
 
 export default defineComponent({
@@ -16,16 +16,13 @@ export default defineComponent({
       default: "markup",
     },
   },
-  setup(props, { slots, attrs }) {
+  setup(props, { slots }) {
     const defaultSlot = (slots && slots.default && slots.default()) || [];
     const code = props.code
       ? props.code
       : defaultSlot && defaultSlot.length
       ? defaultSlot[0].children
       : "";
-    onBeforeUpdate(() => {
-      console.log("aaa");
-    });
     return () => {
       const inline = props.inline;
       const language = props.lang;
@@ -36,7 +33,6 @@ export default defineComponent({
           `Prism component for language "${language}" was not found, did you forget to register it? See all available ones: https://cdn.jsdelivr.net/npm/prismjs/components/`
         );
       }
-      console.log("sss");
       if (inline) {
         return h("code", {
           class: [className],
@@ -46,8 +42,7 @@ export default defineComponent({
       return h(
         "pre",
         {
-          ...attrs,
-          class: [attrs.class, className],
+          class: [className],
         },
         [
           h("code", {

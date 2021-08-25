@@ -1,5 +1,6 @@
+/* eslint-disable */
 import { App } from "vue"
-import plugin from "@/components/Prism.vue"
+import plugin from "./components/Prism.vue"
 export default {
     install: (app: App, options: any) => {
         /* declare global component */

@@ -2,7 +2,7 @@
 ## Install
 
 ```bash
-yarn add vue-component-prismjs
+yarn add @hotrungnhan/vue-prism-component
 ```
 
 First you need to load `Prism` somewhere in your app:
@@ -28,7 +28,7 @@ Then In SFC:
 </template>
 
 <script>
-import Prism from 'vue-prism-component'
+import Prism from '@hotrungnhan/vue-prism-component'
 
 export default {
   data() {
@@ -66,8 +66,12 @@ import 'prismjs/components/prism-rust'
 
 <Prism language="rust" code={ myRustCode } />
 ```
-
-
+## Add more language
+Using https://www.npmjs.com/package/babel-plugin-prismjs to adding more language. remember, plugin now is not support.
+## Roadmap 
+* Plugin support
+* More theme Support
+* Add language less depend on prism babel-plugin-prismjs 
 ## Contributing
 
 1. Fork it!
